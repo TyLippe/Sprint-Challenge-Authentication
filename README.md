@@ -66,6 +66,8 @@ Follow these steps for completing your project:
 Helpful Tip on Testing this Project:
 
 - [ ] **TEST** this project using **`POSTMAN`**.
+(https://i.kym-cdn.com/entries/icons/original/000/029/847/cover4.jpg)
+                    I will test with Insomnia 
 
 ## Minimum Viable Product
 
