@@ -1,4 +1,4 @@
-const db = require('../data/dbConfig');
+const db = require('../database/dbConfig');
 
 const Users = require('./model');
 
@@ -9,7 +9,7 @@ describe('user model', () => {
 
     describe('insert()', () => {
         it('should insert the user into the db', async () => {
-            await Users.insert({ name: 'User1' }); 
+            await Users.add({ username: 'User1', password: 'password'}); 
 
             const users = await db('users');
 
@@ -17,8 +17,8 @@ describe('user model', () => {
         });
 
         it('should insert the user into the db', async () => {
-            await Users.insert({ name: 'User2' }); 
-            await Users.insert({ name: 'User3' }); 
+            await Users.add({ username: 'User2', password: 'password'}); 
+            await Users.add({ username: 'User3', password: 'password'}); 
 
             const users = await db('users'); 
 

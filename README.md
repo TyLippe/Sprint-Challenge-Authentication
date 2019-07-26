@@ -65,7 +65,7 @@ Follow these steps for completing your project:
 
 Helpful Tip on Testing this Project:
 
-- [ ] **TEST** this project using **`POSTMAN`**.
+- [x] **TEST** this project using **`POSTMAN`**.
 (https://i.kym-cdn.com/entries/icons/original/000/029/847/cover4.jpg)
                     I will test with Insomnia 
 
@@ -78,7 +78,7 @@ Helpful Tip on Testing this Project:
 
 **Note** The migrations and a database with empty users is already included
 
-- [ ] Add the authentication related code. If everything is done correctly, visiting `/api/jokes` should return a list of jokes.
+- [x] Add the authentication related code. If everything is done correctly, visiting `/api/jokes` should return a list of jokes.
 
 ## Stretch Problem: Build a front end to interface with your User Auth System
 
