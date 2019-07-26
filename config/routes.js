@@ -18,6 +18,7 @@ function register(req, res) {
 
   Users.add(user)
     .then(saved => {
+      console.log(user.password)
       res.status(201).json(saved);
     })
     .catch(err => {
@@ -34,7 +35,7 @@ function login(req, res) {
       if (user && bcrypt.compareSync(password, user.password)) {
         const token = generateToken(user);
           res.status(200).json({
-            message: `Welcom ${user.username}!`,
+            message: `Welcome ${user.username}!`,
             token
           });
       } else {
@@ -44,7 +45,7 @@ function login(req, res) {
       }
     })
     .catch(err => {
-      res.status(500).json(err);
+      res.status(500).json({ message: 'BRUH' });
     })
 }
 
