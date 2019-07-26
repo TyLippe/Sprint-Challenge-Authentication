@@ -7,7 +7,7 @@ describe('user model', () => {
         await db('users').truncate();
     });
 
-    describe('insert()', () => {
+    describe('add()', () => {
         it('should insert the user into the db', async () => {
             await Users.add({ username: 'User1', password: 'password'}); 
 
@@ -25,4 +25,10 @@ describe('user model', () => {
             expect(users).toHaveLength(2);
         });
     });
+
+    describe('findBy()', () => {
+        it('should find a given user in the db', async () => {
+            await Users.findBy({ username: 'User1' });
+        })
+    })
 });
