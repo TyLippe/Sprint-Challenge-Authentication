@@ -2,6 +2,7 @@ const axios = require('axios');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
+const secrets = require('./secrets.js')
 const { authenticate } = require('../auth/authenticate');
 const Users = require('./model')
 
@@ -27,6 +28,7 @@ function register(req, res) {
     })
 }
 
+//WORKING
 function login(req, res) {
   let { username, password } = req.body;
 
@@ -50,6 +52,7 @@ function login(req, res) {
     })
 }
 
+//WORKING
 function generateToken(user) {
   const jwtPayload = {
       subject: user.id,
@@ -62,6 +65,7 @@ function generateToken(user) {
   return jwt.sign(jwtPayload, secrets.jwtSecret, jwtOptions);
 }
 
+//WORKING
 function getJokes(req, res) {
   const requestOptions = {
     headers: { accept: 'application/json' },
