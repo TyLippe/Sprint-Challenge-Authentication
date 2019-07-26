@@ -13,7 +13,7 @@ describe('server', () => {
                 .post('/register')
                 .send({ username: 'Ty', password: 'password' })
                 .then(res => {
-                    expect(res.status).toBe(200);
+                    expect(res.status).toBe(201);
                 });
         });
     });
@@ -22,10 +22,9 @@ describe('server', () => {
         it('should return 200 OK', () => {
             return request(server)
                 .post('/login')
-                .send({ username: 'Ty', password: 'password' })
+                .send({ username: 'Test1', password: 'password' })
                 .then(res => {
-                    expect(res.type).toMatch(/json/);
-                    expect(res.type).toBe('application/json');
+                    expect(res.status).toBe(200);
                 });
         });
     });
