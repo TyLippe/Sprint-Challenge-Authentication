@@ -11,6 +11,7 @@ module.exports = server => {
   server.get('/api/jokes', authenticate, getJokes);
 };
 
+//WORKING
 function register(req, res) {
   let user = req.body;
   const hash = bcrypt.hashSync(user.password, 8);
