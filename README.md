@@ -34,7 +34,7 @@ Sessions let us keep the authenication active so a user can make requests withou
 
 1. What does bcrypt do to help us store passwords in a secure manner.
 
-When I tell bcrypt to go 8 times over, it will hash the password then hash that hash and so on until it goes over 8 times. When all is done we are able to have bcrypt read the original password without showing it, so then we can use something like compare to check if the user inputs the correct password.
+When I tell bcrypt to go 8 times over, it will salt the password then hash that hash and so on until it goes over 8 times. When all is done we are able to have bcrypt read the original password without showing it, so then we can use something like compare to check if the user inputs the correct password.
 
 1. What does bcrypt do to slow down attackers?
 
@@ -42,7 +42,7 @@ As I mentioned it will hash out the password, when we do this is shows the numbe
 
 1. What are the three parts of the JSON Web Token?
 
-The header, payload and signature.
+The options, payload and secret.
 
 ## Project Set Up
 
@@ -67,7 +67,7 @@ Helpful Tip on Testing this Project:
 
 - [x] **TEST** this project using **`POSTMAN`**.
 (https://i.kym-cdn.com/entries/icons/original/000/029/847/cover4.jpg)
-                    I will test with Insomnia 
+                I will test with Insomnia 
 
 ## Minimum Viable Product
 

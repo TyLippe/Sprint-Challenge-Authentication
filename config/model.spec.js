@@ -25,7 +25,6 @@ describe('user model', () => {
             expect(users).toHaveLength(2);
         });
     });
-
     describe('findBy()', () => {
         it('should find a given user in the db', async () => {
             await Users.findBy({ username: 'User1' });
