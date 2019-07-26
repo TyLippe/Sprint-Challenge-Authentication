@@ -48,6 +48,18 @@ function login(req, res) {
     })
 }
 
+function generateToken(user) {
+  const jwtPayload = {
+      subject: user.id,
+      username: user.username
+  };
+
+  const jwtOptions = {
+      expiresIn: '1d',
+  };
+  return jwt.sign(jwtPayload, secrets.jwtSecret, jwtOptions);
+}
+
 function getJokes(req, res) {
   const requestOptions = {
     headers: { accept: 'application/json' },
